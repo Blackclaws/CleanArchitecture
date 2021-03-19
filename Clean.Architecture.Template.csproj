@@ -1,9 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
       <PackageType>Template</PackageType>
-      <PackageVersion>1.0.1</PackageVersion>
+      <PackageVersion>1.0.2</PackageVersion>
       <PackageId>Clean.Architecture.Templates</PackageId>
-      <Title>Clean Architecture Template</Title>
+      <Title>Clean Architecture Template V 1.0.2</Title>
       <Authors>Me</Authors>
       <Description>Templates to use when creating an application for Adatum Corporation.</Description>
       <PackageTags>dotnet-new;templates;contoso</PackageTags>
@@ -19,7 +19,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-      <Content Include="**\*" Exclude="**\bin\**;**\obj\**;**\.git\**;**\.github\**;**\*.user;**\.vs\**;**\.vscode\**;.gitlab-ci.yml" />
+      <Content Include="**\*" Exclude="**\bin\**;**\obj\**;**\.git\**;**\.github\**;**\*.user;**\.vs\**;**\.vscode\**;.gitlab-ci.yml;Clean.Architecture.Template.csproj" />
       <Compile Remove="**\*" />
   </ItemGroup>
 </Project>
