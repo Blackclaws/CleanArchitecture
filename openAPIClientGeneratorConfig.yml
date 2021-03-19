@@ -1,0 +1,10 @@
+library: httpclient
+additionalProperties:
+  reUseHttpClient: true
+  supportsRetry: false
+  validatable: false
+  packageName: Clean.Architecture.Api.Client
+  packageVersion: 1.0.0
+  packageTitle: Clean.Architecture Generated API Client
+  sourceFolder: "src"
+  targetFramework: netstandard2.0

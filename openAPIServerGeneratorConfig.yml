@@ -1,0 +1,13 @@
+additionalProperties:
+  aspnetCoreVersion: 5.0
+  buildTarget: library
+  operationIsAsync: true
+  operationResultTask: true
+  packageName: Clean.Architecture.Api.Server.Base
+  packageCopyright: Proprietary
+  packageAuthors: Clean.Architecture Authors
+  licenseUrl: http://licenseUrl.com
+  packageVersion: 1.0.0
+  packageTitle: Clean.Architecture Generated API Server Base
+  sourceFolder: "src"
+

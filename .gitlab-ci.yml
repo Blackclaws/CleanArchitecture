@@ -1,0 +1,47 @@
+image: mcr.microsoft.com/dotnet/sdk:5.0
+
+stages:
+  - generate
+  - build
+  - test
+  - push
+
+generateDependencies:
+  stage:
+    generate
+  image:
+    # TODO Change to image of choice, for security reasons an in-house version of this image is always recommended 
+    openapitools/openapi-generator-cli
+  script:
+    ./generateOpenAPIAllCI.sh
+  artifacts:
+    paths:
+      - Clean.Architecture.API.Client/
+      - Clean.Architecture.API.Server.Base/
+
+build:
+  stage:
+    build
+  needs: 
+    - generateDependencies
+  script:
+    - dotnet build Clean.Architecture.sln
+
+test:
+  stage:
+    test
+  needs:
+    - generateDependencies
+    - build
+  script:
+    - dotnet test Clean.Architecture.sln
+
+push:
+  needs:
+    - build
+    - test
+  stage: push
+  script:
+    - dotnet pack -c Release -o "Packages" Clean.Architecture.Template.csproj
+    - dotnet nuget add source "$CI_SERVER_URL/api/v4/projects/$CI_PROJECT_ID/packages/nuget/index.json" --name gitlab --username gitlab-ci-token --password $CI_JOB_TOKEN --store-password-in-clear-text
+    - dotnet nuget push "Packages/*.nupkg" --source gitlab

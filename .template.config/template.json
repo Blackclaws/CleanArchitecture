@@ -1,15 +1,24 @@
 {
-"$schema": "http://json.schemastore.org/template",
-"author": "Steve Smith, Erik Dahl",
-"classifications": [
-"cleanarch"
-],
-"tags": {
-"language": "C#"
-},
-"identity": "Clean.Architecture",
-"name": "Steve Smith Clean Architecture",
-"shortName": "clean-arch",
-"sourceName": "Clean.Architecture",
-"preferNameDirectory": true
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Felix Winterhalter, Steve Smith, Erik Dahl",
+  "classifications": [
+    "cleanarch"
+  ],
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "identity": "Clean.Architecture",
+  "name": "Clean Architecture Template",
+  "shortName": "clean-arch",
+  "sourceName": "Clean.Architecture",
+  "preferNameDirectory": true,
+  "exclude": ["Template.json"],
+  "sources": [{
+    "modifiers": [{
+      "rename": {
+        ".gitlab-ci.yml.template" : ".gitlab-ci.yml"
+      }
+    }]
+  }]
 }
