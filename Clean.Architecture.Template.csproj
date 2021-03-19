@@ -19,7 +19,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-      <Content Include="**\*" Exclude="**\bin\**;**\obj\**;**\.git\**;**\.github\**;**\*.user;**\.vs\**;**\.vscode\**" />
+      <Content Include="**\*" Exclude="**\bin\**;**\obj\**;**\.git\**;**\.github\**;**\*.user;**\.vs\**;**\.vscode\**;.gitlab-ci.yml" />
       <Compile Remove="**\*" />
   </ItemGroup>
 </Project>
