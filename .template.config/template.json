@@ -17,7 +17,7 @@
   "sources": [{
     "modifiers": [{
       "rename": {
-        ".gitlab-ci.yml.template" : ".gitlab-ci.yml"
+        ".gitlab-ci.yml.template" : ".gitlab-ci"
       }
     }]
   }]
