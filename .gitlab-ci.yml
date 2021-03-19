@@ -40,6 +40,11 @@ test:
     - generateDependencies
     - build
   script:
+    - ls -l
+    - ls -l src
+    - ls -l src/Clean.Architecture.Core
+    - ls -l src/Clean.Architecture.Core/bin
+    - ls -l src/Clean.Architecture.Core/bin/Debug
     - dotnet test --no-build Clean.Architecture.sln
 
 push:
