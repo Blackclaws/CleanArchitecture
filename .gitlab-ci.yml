@@ -26,6 +26,10 @@ build:
     - generateDependencies
   script:
     - dotnet build Clean.Architecture.sln
+  artifacts:
+    paths:
+      - "**/bin/"
+      - "**/obj/"
 
 test:
   stage:

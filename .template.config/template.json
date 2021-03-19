@@ -12,13 +12,5 @@
   "name": "Clean Architecture Template",
   "shortName": "clean-arch",
   "sourceName": "Clean.Architecture",
-  "preferNameDirectory": true,
-  "exclude": ["Template.json"],
-  "sources": [{
-    "modifiers": [{
-      "rename": {
-        ".gitlab-ci.yml.template" : ".gitlab-ci"
-      }
-    }]
-  }]
+  "preferNameDirectory": true
 }
