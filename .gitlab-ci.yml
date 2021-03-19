@@ -40,7 +40,7 @@ test:
     - generateDependencies
     - build
   script:
-    - dotnet test Clean.Architecture.sln
+    - dotnet test --no-build Clean.Architecture.sln
 
 push:
   needs:
