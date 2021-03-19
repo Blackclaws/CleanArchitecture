@@ -16,8 +16,8 @@ generateDependencies:
     ./generateOpenAPIAllCI.sh
   artifacts:
     paths:
-      - Clean.Architecture.API.Client/
-      - Clean.Architecture.API.Server.Base/
+      - /src/Clean.Architecture.API.Client/
+      - /src/Clean.Architecture.API.Server.Base/
 
 build:
   stage:
