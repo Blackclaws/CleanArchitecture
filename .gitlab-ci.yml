@@ -127,6 +127,7 @@ push:
   needs:
     - test
   stage: push
+  before_script: []
   script:
     - dotnet pack -c Release -o "Packages" Clean.Architecture.Template.csproj
     - dotnet nuget add source "$CI_SERVER_URL/api/v4/projects/$CI_PROJECT_ID/packages/nuget/index.json" --name gitlab --username gitlab-ci-token --password $CI_JOB_TOKEN --store-password-in-clear-text
